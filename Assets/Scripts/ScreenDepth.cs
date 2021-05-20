@@ -11,7 +11,10 @@ public class ScreenDepth : MonoBehaviour
     public Camera cam = null;
     public Material mat = null;
 
-
+    private void Start()
+    {
+        cam.depthTextureMode = dtm;
+    }
 
     private void Update()
     {

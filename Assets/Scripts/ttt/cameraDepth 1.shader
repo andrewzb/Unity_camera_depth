@@ -63,8 +63,8 @@ Shader "Hidden/cameraDepth 1"
                 float3 WorldNormal = mul(UNITY_MATRIX_IV, float4(NormalDepth.xyz, 0)).xyz;
                 //col.rgb = WorldNormal.rgb;
                 //col.rgb = NormalDepth.w;
-                if(i.uv.x > 2.0/3.0) col.rgb = NormalDepth.w;
-                if(i.uv.x < 1.0/3.0) col.rgb = WorldNormal;
+                if(i.uv.x > 2.0/3.0) col.rgb = float3(NormalDepth.w, NormalDepth.w,NormalDepth.w);
+                if(i.uv.x < 1.0/3.0) col.rgb = WorldNormal.xyz;
 
                 //col.rgb = WorldNormal.rgb;
                 //if (UNITY_MATRIX_IV[0][0] > 0)

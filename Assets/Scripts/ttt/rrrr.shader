@@ -49,7 +49,7 @@ Shader "Custom/rrrr"
 			DecodeDepthNormal(tex2D(_CameraDepthNormalsTexture, i.scrPos.xy), depthValue, normalValues);
 			if (_showNormalColors == 1)
 			{
-				float4 normalColor = float4(normalValues, 1);
+				float4 normalColor = float4(normalValues.x, normalValues.y, normalValues.z, 1);
 				return normalColor;
 			}
 			else
